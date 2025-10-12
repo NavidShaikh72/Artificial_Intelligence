@@ -1,0 +1,100 @@
+3)prepare .pptx
+
+
+
+
+-Go through Import libraries
+-Read & Describe Data
+-Preprocessing Data
+ --Check shape, types, descriptive statistics & its observations
+ --Check for Null 
+ -- How to handle Null Values
+ --Check for Duplicate Values
+ -- How to handle duplicate values
+ --Remove unnecessary columns
+-EDA
+ --explain visual distribution in Charts with kde
+ --explain undersampling Oversampling
+ --explain underfit overfit
+ --explore campaign channel & its meaning
+ --explore campaign type & its meaning
+ --cat plots
+ --Key Inferences
+ --Box Plot its use & how to idnetify & treat outliers
+ --Heatmap
+-Model Building
+ --Types of Encoding & examples
+ --Split Data into Dependent & independent variables
+ --Diff b/w transform vs fitransform
+ --SMOTE , TOMEK, SMOTETomek
+ --split into train test
+     >>>explain Logistic Regression confusion matrix classification report
+     >>>explain knn
+     >>>explain SVM randomized search confusion matrix classification report (randomized search)
+     >>>explain Decision Tree confusion matrix classification report(randomized search)
+     >>>explain Random Forest confusion matrix classification report(grid search) 
+     >>>explain XGBoost confusion matrix classification report(grid search)
+--Final Accuracy Chart
+
+
+Intro
+Types of ML & respective algos & examples
+
+PreProcessing
+Mean, Median & Mode
+How to handle Null values
+How to handle Duplicate values
+df.drop(['CustomerID', 'AdvertisingPlatform', 'AdvertisingTool'], axis = 1, inplace = True) axis =1 & inplace means?
+
+EDA
+Explain sns.histplot(data = df, x = 'Age', kde = True)
+Explain sns.histplot(data = df, y = 'AdSpend', hue = 'Conversion', kde = True)
+Explain df['Conversion'].value_counts()
+Explain g = sns.catplot(
+    data=df,
+    x = 'CampaignType',
+    hue = 'Gender',
+    col = 'CampaignChannel',  
+    row = 'Conversion',
+    kind = 'count',
+    height = 4,
+    aspect = 1
+)
+Explain Box Plots of Numerical Columns
+Explain sns.boxplot(data = df, x = 'Gender', y = 'Income')
+Explain heatmap
+
+Model Building
+Encoding Techniques
+Split Data into dependent & independent variables
+Standardization & Normalization & standard deviation
+transform() & fit_transform()
+SMOTE, Tomek, SMOTETomek
+oversampling & undersampling
+Train & Test
+    Logistic Regression
+     Confusion Matrix
+     Accuracy Precision Recal F1 Score
+    KNN
+    SVM using RandomizedSearchCV 
+     Confusion Matrix
+     Accuracy Precision Recal F1 Score
+    Decision Tree using RandomizedSearchCV
+     Gini Entropy
+     Confusion Matrix
+     Accuracy Precision Recal F1 Score
+    Random Forest using GridSearchCV
+     Gini Entropy
+     Confusion Matrix
+     Accuracy Precision Recal F1 Score
+    XGBClassifier using GridSearchCV
+     Gini Entropy
+     Confusion Matrix
+     Accuracy Precision Recal F1 Score
+
+
+
+     
+ 
+ 
+ 
