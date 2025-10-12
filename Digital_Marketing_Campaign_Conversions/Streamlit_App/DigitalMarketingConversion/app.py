@@ -9,7 +9,8 @@ import os
 # ------------------------------------------------------------
 @st.cache_data
 def load_data():
-    data_path = os.path.join("data", "new_data.csv")
+    base_path = os.path.dirname(__file__)  # location of app.py
+    data_path = os.path.join(base_path, "data", "new_data.csv")
     df = pd.read_csv(data_path)
     return df
 
@@ -30,7 +31,8 @@ based on their marketing and demographic features using an **XGBoost model**.
 # ------------------------------------------------------------
 # 2️⃣ Load trained model (.pkl)
 # ------------------------------------------------------------
-model_path = os.path.join("models", "xgboost_model.pkl")
+base_path = os.path.dirname(__file__)  # location of app.py
+model_path = os.path.join(base_path,"models", "xgboost_model.pkl")
 
 try:
     with open(model_path, "rb") as file:
